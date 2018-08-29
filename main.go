@@ -10,7 +10,7 @@ import (
 func main () {
 	router := routers.InitRouter()
 
-	server := endless.NewServer("localhost:4242", handler)
+	server := endless.NewServer("localhost:4242", router)
 	server.BeforeBegin = func(add string) {
 		log.Printf("Actual pid is %d", syscall.Getpid())
 		// save it somehow
