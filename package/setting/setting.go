@@ -5,8 +5,10 @@ import (
 	"log"
 )
 
+// 定义服务器配置结构体
 type Server struct {
-	Port     int
+	Ip	 	 string
+	Port     string
 }
 var ServerSetting = &Server{}
 
