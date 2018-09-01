@@ -14,16 +14,13 @@ func main () {
 	router := routers.InitRouter()
 	setting.Setup()
 
-	// 连接数据库
-	//databaseUrl := "127.0.0.1:27017"
-	//session, err :=
-
 	// 启动服务器
 	address := fmt.Sprintf("%s:%s", setting.ServerSetting.Ip, setting.ServerSetting.Port)
 	server := endless.NewServer(address, router)
 	server.BeforeBegin = func(add string) {
 		log.Printf("Actual pid is %d", syscall.Getpid())
 	}
+	// 处理服务器错误
 	err := server.ListenAndServe()
 	if err != nil {
 		log.Printf("Server err: %v", err)
