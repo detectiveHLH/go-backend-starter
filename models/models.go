@@ -10,18 +10,10 @@ import (
 
 var db *gorm.DB
 
-//type Model struct {
-//	ID         int `gorm:"primary_key" json:"id"`
-//	CreatedOn  int `json:"created_on"`
-//	ModifiedOn int `json:"modified_on"`
-//	DeletedOn  int `json:"deleted_on"`
-//}
-
 func Setup() {
 	/**
 	连接数据库
 	 */
-	 fmt.Println(setting.DatabaseSetting)
 	var err error
 	db, err = gorm.Open(
 		setting.DatabaseSetting.Type, fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local",

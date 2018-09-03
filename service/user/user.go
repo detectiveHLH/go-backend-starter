@@ -2,7 +2,6 @@ package user
 
 import (
 	"../../models"
-	"fmt"
 )
 
 type User struct {
@@ -13,7 +12,6 @@ type User struct {
 }
 
 func (newUser *User) Add() error {
-	fmt.Println("InService")
 	user := map[string]interface{}{
 		"name": newUser.Name,
 		"age": newUser.Age,
@@ -27,9 +25,7 @@ func (newUser *User) Add() error {
 
 func (queryUser *User) Get() (*models.User, error) {
 	user, err := models.GetUser(queryUser.Id)
-	fmt.Println(queryUser.Id)
 	if err != nil {
-		fmt.Println("错误2")
 		return nil, err
 	}
 	return user, nil
