@@ -1,17 +1,18 @@
 package setting
 
 import (
+	"fmt"
 	"gopkg.in/ini.v1"
 	"log"
 )
 
 // 定义服务器配置结构体
 type Server struct {
-	Ip	 	 string
-	Port     string
+	Ip   string
+	Port string
 }
-var ServerSetting = &Server{}
 
+var ServerSetting = &Server{}
 var config *ini.File
 
 func Setup() {
@@ -24,6 +25,7 @@ func Setup() {
 }
 
 func mapTo(section string, v interface{}) {
+	fmt.Print(config.Section(section))
 	err := config.Section(section).MapTo(v)
 	if err != nil {
 		log.Fatalf("Cfg.MapTo RedisSetting err: %v", err)
