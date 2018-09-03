@@ -3,10 +3,10 @@ package main
 import (
 	"./pkg/setting"
 	"./routers"
+	"./models"
 	"fmt"
 	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"
-	"gopkg.in/mgo.v2"
 	"log"
 	"net/http"
 	"strings"
@@ -23,26 +23,27 @@ func main () {
 	初始化系统设置
 	 */
 	setting.Setup()
+	models.Setup()
 
 
-	/**
-	连接数据库
-	 */
-	session, databaseErr := mgo.Dial(setting.DatabaseSetting.Url)
-	//连接失败时终止
-	if databaseErr != nil {
-		panic(databaseErr)
-	}
-	fmt.Println("连接成功")
-	//延迟关闭，释放资源
-	defer session.Close()
-	//设置模式
-	session.SetMode(mgo.Monotonic, true)
+	///**
+	//连接数据库
+	// */
+	//session, databaseErr := mgo.Dial(setting.DatabaseSetting.Url)
+	////连接失败时终止
+	//if databaseErr != nil {
+	//	panic(databaseErr)
+	//}
+	//fmt.Println("连接成功")
+	////延迟关闭，释放资源
+	//defer session.Close()
+	////设置模式
+	//session.SetMode(mgo.Monotonic, true)
 
 	/**
 	路由注入
 	 */
-	router := routers.InitRouter(session)
+	router := routers.InitRouter()
 
 	/**
 	启动服务器

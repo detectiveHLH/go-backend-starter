@@ -11,7 +11,12 @@ type Server struct {
 	Port string
 }
 type Database struct {
-	Url string
+	Type        string
+	User        string
+	Password    string
+	Host        string
+	Name        string
+	TablePrefix string
 }
 
 var ServerSetting = &Server{}

@@ -1,15 +1,16 @@
 package routers
 
 import (
+	"../service/user"
+	"../pkg/app"
 	"fmt"
+	"github.com/EDDYCJY/go-gin-example/pkg/e"
 	"github.com/gin-gonic/gin"
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
-	"log"
 	"net/http"
+	"strconv"
 )
 
-func InitRouter(session *mgo.Session) *gin.Engine {
+func InitRouter() *gin.Engine {
 	router := gin.New()
 	//router.Use(Cors())
 
@@ -52,25 +53,26 @@ func InitRouter(session *mgo.Session) *gin.Engine {
 		})
 	})
 
-	router.GET("/mongo", func(context *gin.Context) {
-		// 选择数据库与集合
-		c := session.DB("adatabase").C("acollection")
-		// 插入文档
-		err := c.Insert(&Person{Name: "Ale", Phone: "+55 53 8116 9639"},
-			&Person{Name: "Cla", Phone: "+55 53 8402 8510"})
-		// 出错判断
-		if err != nil {
-			log.Fatal(err)
+	router.POST("/addTag", func(c *gin.Context) {
+		fmt.Println("InRouter")
+		appGin := app.Gin{c}
+		name := c.PostForm("name")
+		age, converErr := strconv.Atoi(c.PostForm("age"))
+		state, converErr := strconv.Atoi(c.PostForm("state"))
+
+		userService := user.User{
+			Name: name,
+			Age: age,
+			State: state,
 		}
-		//查询文档
-		result := Person{}
-		// 注意mongodb存储后的字段大小写问题
-		err = c.Find(bson.M{"name": "Ale"}).One(&result)
-		//出错判断
-		if err != nil {
-			log.Fatal(err)
+		if converErr != nil {
+			appGin.Response(http.StatusOK, e.ERROR_ADD_ARTICLE_FAIL, nil)
 		}
-		fmt.Println("Phone:", result.Phone)
+		if err := userService.Add(); err != nil {
+			appGin.Response(http.StatusOK, e.ERROR_ADD_ARTICLE_FAIL, nil)
+			return
+		}
+		appGin.Response(http.StatusOK, e.SUCCESS, userService)
 	})
 
 	return router
