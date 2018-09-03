@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	"github.com/jinzhu/gorm"
 )
 
@@ -22,4 +23,15 @@ func AddUser(data map[string]interface{}) error {
 		return err
 	}
 	return nil
+}
+
+func GetUser(id int) (*User, error) {
+	var user User
+	err := db.Where("id = ?", id).First(&user).Error
+	if err != nil {
+		fmt.Println("错误1")
+		return nil, err
+	}
+
+	return &user, nil
 }

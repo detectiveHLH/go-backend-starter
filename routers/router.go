@@ -1,13 +1,14 @@
 package routers
 
 import (
-	"../service/user"
 	"../pkg/app"
+	"../service/user"
 	"fmt"
 	"github.com/EDDYCJY/go-gin-example/pkg/e"
+	"github.com/Unknwon/com"
+	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"strconv"
 )
 
 func InitRouter() *gin.Engine {
@@ -54,25 +55,45 @@ func InitRouter() *gin.Engine {
 	})
 
 	router.POST("/addTag", func(c *gin.Context) {
-		fmt.Println("InRouter")
 		appGin := app.Gin{c}
 		name := c.PostForm("name")
-		age, converErr := strconv.Atoi(c.PostForm("age"))
-		state, converErr := strconv.Atoi(c.PostForm("state"))
+		age := com.StrTo(c.PostForm("age")).MustInt()
+		state := com.StrTo(c.PostForm("state")).MustInt()
 
 		userService := user.User{
 			Name: name,
 			Age: age,
 			State: state,
 		}
-		if converErr != nil {
-			appGin.Response(http.StatusOK, e.ERROR_ADD_ARTICLE_FAIL, nil)
-		}
 		if err := userService.Add(); err != nil {
 			appGin.Response(http.StatusOK, e.ERROR_ADD_ARTICLE_FAIL, nil)
 			return
 		}
 		appGin.Response(http.StatusOK, e.SUCCESS, userService)
+	})
+
+	router.GET("/getUser", func(c *gin.Context) {
+		appGin := app.Gin{c}
+		id := com.StrTo(c.Query("id")).MustInt()
+		valid := validation.Validation{}
+		valid.Min(id, 0, "id").Message("Id必须大于0")
+
+
+		if valid.HasErrors() {
+			fmt.Println(valid.Errors)
+			appGin.Response(http.StatusOK, e.INVALID_PARAMS, nil)
+			return
+		}
+
+		userService := user.User{Id: id}
+		user, err := userService.Get()
+		if err != nil {
+			fmt.Println("错误3")
+			appGin.Response(http.StatusOK, e.ERROR_GET_ARTICLE_FAIL, nil)
+			return
+		}
+
+		appGin.Response(http.StatusOK, e.SUCCESS, user)
 	})
 
 	return router
