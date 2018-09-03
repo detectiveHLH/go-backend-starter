@@ -1,7 +1,6 @@
 package setting
 
 import (
-	"fmt"
 	"gopkg.in/ini.v1"
 	"log"
 )
@@ -11,8 +10,12 @@ type Server struct {
 	Ip   string
 	Port string
 }
+type Database struct {
+	Url string
+}
 
 var ServerSetting = &Server{}
+var DatabaseSetting = &Database{}
 var config *ini.File
 
 func Setup() {
@@ -22,10 +25,10 @@ func Setup() {
 		log.Fatal("Fail to parse 'config/app.ini': %v", err)
 	}
 	mapTo("server", ServerSetting)
+	mapTo("database", DatabaseSetting)
 }
 
 func mapTo(section string, v interface{}) {
-	fmt.Print(config.Section(section))
 	err := config.Section(section).MapTo(v)
 	if err != nil {
 		log.Fatalf("Cfg.MapTo RedisSetting err: %v", err)
