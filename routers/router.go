@@ -19,41 +19,7 @@ func InitRouter() *gin.Engine {
 		Phone string
 	}
 
-	router.GET("/", func(ctx *gin.Context) {
-		ctx.String(http.StatusOK, "Hello, welcome to index ")
-	})
-
-	// url参数由query获取
-	router.GET("/welcome", func(ctx *gin.Context) {
-		firstname := ctx.DefaultQuery("firstname", "Guest")
-		lastname := ctx.Query("lastname")
-		ctx.String(http.StatusOK, "Hello %s %s", firstname, lastname)
-	})
-
-	router.POST("/add", func(ctx *gin.Context) {
-		id := ctx.Query("id")
-		page := ctx.DefaultQuery("page", "0")
-		name := ctx.PostForm("name")
-		message := ctx.PostForm("message")
-		fmt.Printf("id: %s; page: %s; name: %s; message: %s", id, page, name, message)
-		ctx.JSON(200, gin.H{
-			"status": gin.H{
-				"status_code": http.StatusOK,
-				"status":      "ok",
-			},
-			"message": message,
-			"name":    name,
-		})
-	})
-
-	router.GET("/test", func(ctx *gin.Context) {
-		ctx.JSON(200, gin.H{
-			"id":   1,
-			"name": "Tom",
-		})
-	})
-
-	router.POST("/addTag", func(c *gin.Context) {
+	router.POST("/addUser", func(c *gin.Context) {
 		appGin := app.Gin{c}
 		name := c.PostForm("name")
 		age := com.StrTo(c.PostForm("age")).MustInt()
