@@ -14,7 +14,7 @@ govendor init
 ```go
 govendor add +external
 ```
-- 更新包
+- 获取更新
 ```go
-govendor update 具体包名
+govendor fetch 具体包名
 ```
