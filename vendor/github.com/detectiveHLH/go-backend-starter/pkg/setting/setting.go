@@ -3,7 +3,6 @@ package setting
 import (
 	"gopkg.in/ini.v1"
 	"log"
-	"os"
 )
 
 // 定义服务器配置结构体
@@ -26,8 +25,7 @@ var config *ini.File
 
 func Setup() {
 	var err error
-	dir, _ := os.Getwd()
-	config, err = ini.Load(dir + "/config/app.ini")
+	config, err = ini.Load("/config/app.ini")
 	if err != nil {
 		log.Fatal("Fail to parse 'config/app.ini': %v", err)
 	}
