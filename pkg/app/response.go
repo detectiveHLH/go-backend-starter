@@ -1,7 +1,7 @@
 package app
 
 import (
-	"../e"
+	"github.com/detectiveHLH/go-backend-starter/pkg/e"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"../pkg/app"
-	"../service/user"
+	"github.com/detectiveHLH/go-backend-starter/pkg/app"
+	"github.com/detectiveHLH/go-backend-starter/service/user"
 	"fmt"
-	"../pkg/e"
+	"github.com/detectiveHLH/go-backend-starter/pkg/e"
 	"github.com/Unknwon/com"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"

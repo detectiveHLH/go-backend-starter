@@ -1,7 +1,7 @@
 package user
 
 import (
-	"../../models"
+	"github.com/detectiveHLH/go-backend-starter/models"
 )
 
 type User struct {

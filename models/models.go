@@ -1,7 +1,7 @@
 package models
 
 import (
-	"../pkg/setting"
+	"github.com/detectiveHLH/go-backend-starter/pkg/setting"
 	_ "database/sql"
 	"fmt"
 	"github.com/jinzhu/gorm"
