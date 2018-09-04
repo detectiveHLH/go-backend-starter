@@ -1,10 +1,10 @@
 package main
 
 import (
-	"./models"
 	"./pkg/setting"
 	"./routers"
 	"fmt"
+	"github.com/EDDYCJY/go-gin-example/models"
 	"github.com/fvbock/endless"
 	"log"
 	"syscall"
@@ -20,8 +20,10 @@ func main () {
 	初始化系统设置
 	 */
 	setting.Setup()
+	/**
+	初始化模型层，连接数据库
+	 */
 	models.Setup()
-
 
 	/**
 	路由注入
