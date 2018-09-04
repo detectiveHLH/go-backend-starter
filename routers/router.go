@@ -1,13 +1,13 @@
 package routers
 
 import (
+	"fmt"
+	"github.com/astaxie/beego/validation"
 	"github.com/detectiveHLH/go-backend-starter/pkg/app"
 	"github.com/detectiveHLH/go-backend-starter/service/user"
-	"fmt"
 	"github.com/detectiveHLH/go-backend-starter/pkg/e"
-	"github.com/Unknwon/com"
-	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
+	"github.com/Unknwon/com"
 	"net/http"
 )
 

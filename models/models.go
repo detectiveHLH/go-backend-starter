@@ -1,9 +1,9 @@
 package models
 
 import (
-	"github.com/detectiveHLH/go-backend-starter/pkg/setting"
 	_ "database/sql"
 	"fmt"
+	"github.com/detectiveHLH/go-backend-starter/pkg/setting"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"log"

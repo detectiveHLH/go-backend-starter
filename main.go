@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/detectiveHLH/go-backend-starter/pkg/setting"
-	"github.com/detectiveHLH/go-backend-starter/routers"
 	"fmt"
 	"github.com/detectiveHLH/go-backend-starter/models"
+	"github.com/detectiveHLH/go-backend-starter/pkg/setting"
+	"github.com/detectiveHLH/go-backend-starter/routers"
 	"github.com/fvbock/endless"
 	"log"
 	"syscall"
