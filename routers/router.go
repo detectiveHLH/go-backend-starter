@@ -4,7 +4,7 @@ import (
 	"../pkg/app"
 	"../service/user"
 	"fmt"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
+	"../pkg/e"
 	"github.com/Unknwon/com"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
