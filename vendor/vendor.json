@@ -15,6 +15,42 @@
 			"revisionTime": "2018-07-31T13:18:48Z"
 		},
 		{
+			"checksumSHA1": "V+IHeoPUoII8RgZKUUt2vUSgokQ=",
+			"path": "github.com/detectiveHLH/go-backend-starter/models",
+			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
+			"revisionTime": "2018-09-04T07:28:51Z"
+		},
+		{
+			"checksumSHA1": "3Q4F61wnrdfFgDjTmCvz5AZWQbQ=",
+			"path": "github.com/detectiveHLH/go-backend-starter/pkg/app",
+			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
+			"revisionTime": "2018-09-04T07:28:51Z"
+		},
+		{
+			"checksumSHA1": "YXs0jb1iplSX63m154Bn9hdewl0=",
+			"path": "github.com/detectiveHLH/go-backend-starter/pkg/e",
+			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
+			"revisionTime": "2018-09-04T07:28:51Z"
+		},
+		{
+			"checksumSHA1": "ETFyfJ6X7B8kPQCUWZNKVxTWY+Y=",
+			"path": "github.com/detectiveHLH/go-backend-starter/pkg/setting",
+			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
+			"revisionTime": "2018-09-04T07:28:51Z"
+		},
+		{
+			"checksumSHA1": "Z7V55h0CpJuIxtkVZPaI2mWJNac=",
+			"path": "github.com/detectiveHLH/go-backend-starter/routers",
+			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
+			"revisionTime": "2018-09-04T07:28:51Z"
+		},
+		{
+			"checksumSHA1": "BbpQsgzatcXRTnxDjCZphJy84SU=",
+			"path": "github.com/detectiveHLH/go-backend-starter/service/user",
+			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
+			"revisionTime": "2018-09-04T07:28:51Z"
+		},
+		{
 			"checksumSHA1": "q9bsaNA05ney3eon3nKAE+eLwO4=",
 			"path": "github.com/fvbock/endless",
 			"revision": "447134032cb6a86814f570257390a379982dfc61",
