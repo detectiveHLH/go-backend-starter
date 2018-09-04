@@ -15,48 +15,6 @@
 			"revisionTime": "2018-07-31T13:18:48Z"
 		},
 		{
-			"checksumSHA1": "Zgv4+PBEsBbtz2P6427HXLuChHw=",
-			"path": "github.com/detectiveHLH/go-backend-starter",
-			"revision": "b37727c882b55368a4104fffc98a4e4a3ace81b7",
-			"revisionTime": "2018-09-04T09:33:25Z"
-		},
-		{
-			"checksumSHA1": "V+IHeoPUoII8RgZKUUt2vUSgokQ=",
-			"path": "github.com/detectiveHLH/go-backend-starter/models",
-			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
-			"revisionTime": "2018-09-04T07:28:51Z"
-		},
-		{
-			"checksumSHA1": "3Q4F61wnrdfFgDjTmCvz5AZWQbQ=",
-			"path": "github.com/detectiveHLH/go-backend-starter/pkg/app",
-			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
-			"revisionTime": "2018-09-04T07:28:51Z"
-		},
-		{
-			"checksumSHA1": "YXs0jb1iplSX63m154Bn9hdewl0=",
-			"path": "github.com/detectiveHLH/go-backend-starter/pkg/e",
-			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
-			"revisionTime": "2018-09-04T07:28:51Z"
-		},
-		{
-			"checksumSHA1": "5XHnMP6/v2h2Pu0sYj0EL8LFWWY=",
-			"path": "github.com/detectiveHLH/go-backend-starter/pkg/setting",
-			"revision": "b37727c882b55368a4104fffc98a4e4a3ace81b7",
-			"revisionTime": "2018-09-04T09:33:25Z"
-		},
-		{
-			"checksumSHA1": "Z7V55h0CpJuIxtkVZPaI2mWJNac=",
-			"path": "github.com/detectiveHLH/go-backend-starter/routers",
-			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
-			"revisionTime": "2018-09-04T07:28:51Z"
-		},
-		{
-			"checksumSHA1": "BbpQsgzatcXRTnxDjCZphJy84SU=",
-			"path": "github.com/detectiveHLH/go-backend-starter/service/user",
-			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
-			"revisionTime": "2018-09-04T07:28:51Z"
-		},
-		{
 			"checksumSHA1": "q9bsaNA05ney3eon3nKAE+eLwO4=",
 			"path": "github.com/fvbock/endless",
 			"revision": "447134032cb6a86814f570257390a379982dfc61",
@@ -133,24 +91,6 @@
 			"path": "github.com/ugorji/go/codec",
 			"revision": "e253f1f20942cb6dc505e504e8bbba4b7f434cb2",
 			"revisionTime": "2018-08-31T06:23:57Z"
-		},
-		{
-			"checksumSHA1": "P/k5ZGf0lEBgpKgkwy++F7K1PSg=",
-			"path": "gopkg.in/go-playground/validator.v8",
-			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
-			"revisionTime": "2017-07-30T05:02:35Z"
-		},
-		{
-			"checksumSHA1": "O55NPQ22D28UOLch2++jY3tCAvk=",
-			"path": "gopkg.in/ini.v1",
-			"revision": "5cf292cae48347c2490ac1a58fe36735fb78df7e",
-			"revisionTime": "2018-08-18T11:46:59Z"
-		},
-		{
-			"checksumSHA1": "ZSWoOPUNRr5+3dhkLK3C4cZAQPk=",
-			"path": "gopkg.in/yaml.v2",
-			"revision": "5420a8b6744d3b0345ab293f6fcba19c978f1183",
-			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
 	"rootPath": "go-backend-starter"

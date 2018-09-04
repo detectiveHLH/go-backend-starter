@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/detectiveHLH/go-backend-starter/pkg/e"
 	"github.com/gin-gonic/gin"
+	"go-backend-starter/pkg/e"
 )
 
 type Gin struct {

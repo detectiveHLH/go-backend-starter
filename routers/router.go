@@ -3,11 +3,11 @@ package routers
 import (
 	"fmt"
 	"github.com/astaxie/beego/validation"
-	"github.com/detectiveHLH/go-backend-starter/pkg/app"
-	"github.com/detectiveHLH/go-backend-starter/service/user"
-	"github.com/detectiveHLH/go-backend-starter/pkg/e"
 	"github.com/gin-gonic/gin"
 	"github.com/Unknwon/com"
+	"go-backend-starter/pkg/app"
+	"go-backend-starter/pkg/e"
+	"go-backend-starter/service/user"
 	"net/http"
 )
 
