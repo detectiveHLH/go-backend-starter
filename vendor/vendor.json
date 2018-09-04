@@ -91,6 +91,24 @@
 			"path": "github.com/ugorji/go/codec",
 			"revision": "e253f1f20942cb6dc505e504e8bbba4b7f434cb2",
 			"revisionTime": "2018-08-31T06:23:57Z"
+		},
+		{
+			"checksumSHA1": "P/k5ZGf0lEBgpKgkwy++F7K1PSg=",
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
+			"revisionTime": "2017-07-30T05:02:35Z"
+		},
+		{
+			"checksumSHA1": "O55NPQ22D28UOLch2++jY3tCAvk=",
+			"path": "gopkg.in/ini.v1",
+			"revision": "5cf292cae48347c2490ac1a58fe36735fb78df7e",
+			"revisionTime": "2018-08-18T11:46:59Z"
+		},
+		{
+			"checksumSHA1": "ZSWoOPUNRr5+3dhkLK3C4cZAQPk=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "5420a8b6744d3b0345ab293f6fcba19c978f1183",
+			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
 	"rootPath": "go-backend-starter"
