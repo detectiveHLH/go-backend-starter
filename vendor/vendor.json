@@ -15,6 +15,12 @@
 			"revisionTime": "2018-07-31T13:18:48Z"
 		},
 		{
+			"checksumSHA1": "aSQULI+MAAYE6j0yUJ98e08xKkU=",
+			"path": "github.com/detectiveHLH/go-backend-starter",
+			"revision": "5e056cd9d4f23ff78062111ee27335bab848ed71",
+			"revisionTime": "2018-09-04T08:16:57Z"
+		},
+		{
 			"checksumSHA1": "V+IHeoPUoII8RgZKUUt2vUSgokQ=",
 			"path": "github.com/detectiveHLH/go-backend-starter/models",
 			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
@@ -33,10 +39,10 @@
 			"revisionTime": "2018-09-04T07:28:51Z"
 		},
 		{
-			"checksumSHA1": "ETFyfJ6X7B8kPQCUWZNKVxTWY+Y=",
+			"checksumSHA1": "bNXC4k1yD4POhpFMN03MGxcySDk=",
 			"path": "github.com/detectiveHLH/go-backend-starter/pkg/setting",
-			"revision": "6ebd3e84d379f7b14923214a8ac6e52c4e2bfb8d",
-			"revisionTime": "2018-09-04T07:28:51Z"
+			"revision": "5e056cd9d4f23ff78062111ee27335bab848ed71",
+			"revisionTime": "2018-09-04T08:16:57Z"
 		},
 		{
 			"checksumSHA1": "Z7V55h0CpJuIxtkVZPaI2mWJNac=",
