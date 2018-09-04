@@ -27,7 +27,7 @@ var config *ini.File
 func Setup() {
 	var err error
 	dir, _ := os.Getwd()
-	config, err = ini.Load(dir + "/config/app.ini")
+	config, err = ini.Load(dir + "/go-backend-starter/config/app.ini")
 	if err != nil {
 		log.Fatal("Fail to parse 'config/app.ini': %v", err)
 	}
