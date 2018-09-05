@@ -4,7 +4,7 @@
 基于gin、gorm的RESTFUL风格的后端框架，使用dep作为项目的包管理器
 </div>
 
-简体中文 | [English](./README-en.md)
+简体中文 | [English](README_en.md)
 
 ## 安装golang
 Mac下，安装golang，使用以下命令便可以安装
