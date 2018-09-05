@@ -12,6 +12,11 @@ type User struct {
 	State int `json:"state"`
 }
 
+/**
+添加用户
+@param		data		数据
+@return		error|nil	错误信息，如没有，则返回空
+ */
 func AddUser(data map[string]interface{}) error {
 	newUser := User{
 		Name: data["name"].(string),
@@ -24,6 +29,11 @@ func AddUser(data map[string]interface{}) error {
 	return nil
 }
 
+/**
+获取用户信息
+@param		id			数据id
+@returns	data, error	数据，错误信息
+ */
 func GetUser(id int) (*User, error) {
 	var user User
 	err := db.Where("id = ?", id).First(&user).Error
