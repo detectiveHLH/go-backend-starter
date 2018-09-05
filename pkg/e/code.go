@@ -1,9 +1,8 @@
-/**
-响应事件的状态码
- */
-
 package e
 
+/**
+状态码常量表
+ */
 const (
 	SUCCESS        = 200
 	ERROR          = 500
