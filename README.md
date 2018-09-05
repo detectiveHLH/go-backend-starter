@@ -6,6 +6,8 @@
 
 简历中文 | [English](./README-en.md)
 
+## 起步
+
 ## 包管理器
 包管理器，使用的 [govendor](https://github.com/kardianos/govendor)，安装命令如下。
 ```go

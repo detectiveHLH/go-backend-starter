@@ -2,9 +2,9 @@ package routers
 
 import (
 	"fmt"
+	"github.com/Unknwon/com"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
-	"github.com/Unknwon/com"
 	"go-backend-starter/pkg/app"
 	"go-backend-starter/pkg/e"
 	"go-backend-starter/service/user"
