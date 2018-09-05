@@ -1,5 +1,8 @@
 package e
 
+/**
+后端返回信息的映射表
+ */
 var MsgFlags = map[int]string{
 	SUCCESS:                         "ok",
 	ERROR:                           "fail",
@@ -32,11 +35,15 @@ var MsgFlags = map[int]string{
 	ERROR_UPLOAD_CHECK_IMAGE_FORMAT: "校验图片错误，图片格式或大小有问题",
 }
 
+/**
+根据code返回相应的信息
+@param	code	key
+@return	msg		value
+ */
 func GetMsg(code int) string {
 	msg, ok := MsgFlags[code]
 	if ok {
 		return msg
 	}
-
 	return MsgFlags[ERROR]
 }
