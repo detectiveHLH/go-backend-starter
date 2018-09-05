@@ -18,6 +18,14 @@
   version = "v1.10.1"
 
 [[projects]]
+  digest = "1:76dc72490af7174349349838f2fe118996381b31ea83243812a97e5a0fd5ed55"
+  name = "github.com/dgrijalva/jwt-go"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
+  version = "v3.2.0"
+
+[[projects]]
   branch = "master"
   digest = "1:0ae01c9e122d522c729f55986d052983d7e813f3e82a32b887374906a286e7de"
   name = "github.com/fvbock/endless"
@@ -147,6 +155,7 @@
   input-imports = [
     "github.com/Unknwon/com",
     "github.com/astaxie/beego/validation",
+    "github.com/dgrijalva/jwt-go",
     "github.com/fvbock/endless",
     "github.com/gin-gonic/gin",
     "github.com/jinzhu/gorm",
