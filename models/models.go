@@ -14,6 +14,11 @@ var db *gorm.DB
 func Setup() {
 	/**
 	连接数据库
+	@param	type		类型
+	@param	user		用户名
+	@param	password	密码
+	@param	host		地址
+	@param	name		数据库名
 	 */
 	var err error
 	db, err = gorm.Open(
