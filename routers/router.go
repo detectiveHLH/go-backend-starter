@@ -8,7 +8,11 @@ import (
 
 func InitRouter() *gin.Engine {
 	router := gin.New()
+
+	// 定义鉴权接口
 	router.GET("/auth", GetAuth)
+
+	// 第一版API
 	apiVersionOne := router.Group("/api/v1/")
 	apiVersionOne.Use(jwt.JWT())
 	apiVersionOne.GET("getUser", v1.GetUser)

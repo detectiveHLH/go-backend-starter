@@ -20,13 +20,11 @@ type auth struct {
 func GetAuth(c *gin.Context) {
 	appG := app.Gin{C: c}
 	valid := validation.Validation{}
-
 	username := c.Query("username")
 	password := c.Query("password")
 
 	a := auth{Username: username, Password: password}
 	ok, _ := valid.Valid(&a)
-
 	if !ok {
 		//app.MarkErrors(valid.Errors)
 		appG.Response(http.StatusOK, e.INVALID_PARAMS, nil)
