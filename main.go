@@ -15,6 +15,13 @@ type Person struct {
 	Phone string
 }
 
+// @title Golang Gin API
+// @version 1.0
+// @description Go Backend Starter
+// @termsOfService https://github.com/detectiveHLH/go-backend-starter
+
+// @license.name MIT
+// @license.url https://github.com/EDDYCJY/go-gin-example/blob/master/LICENSE
 func main () {
 	/**
 	初始化系统设置
