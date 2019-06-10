@@ -14,3 +14,17 @@ cd go-backend-starter
 go get
 ```
 
+## Note
+
+- go的版本需要高于1.11
+- 使用goland时，需要确保Go module是Enable状态
+
+## Usage
+
+- View [Swagger API documentation](http://localhost:8080/swagger/index.html)
+- View [Log in](http://localhost:8080/login?username=test&password=123) API, can get the access token for the system
+
+## License
+
+[MIT](./LICENSE)
+
