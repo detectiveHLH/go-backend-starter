@@ -15,6 +15,12 @@ type auth struct {
 }
 
 
+// @Summary 登录
+// @Produce  json
+// @Param username query string true "username"
+// @Param password query string true "password"
+// @Success 200 {string} json "{"code":200,"data":{},"msg":"ok"}"
+// @Router /login [get]
 func Login(c *gin.Context) {
 	appG := util.Gin{C: c}
 	valid := validation.Validation{}
