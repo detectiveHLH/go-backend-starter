@@ -3,7 +3,6 @@ package setting
 import (
 	"gopkg.in/ini.v1"
 	"log"
-	"os/user"
 )
 
 type App struct {
@@ -29,11 +28,7 @@ var config *ini.File
 
 func Setup() {
 	var err error
-	home, getPathErr := user.Current()
-	if getPathErr != nil {
-		log.Fatal(getPathErr)
-	}
-	config, err = ini.Load(home.HomeDir + "/go/src/go-backend-starter/config/app.ini")
+	config, err = ini.Load("config/app.ini")
 	if err != nil {
 		log.Fatal("Fail to parse 'config/app.ini': %v", err)
 	}

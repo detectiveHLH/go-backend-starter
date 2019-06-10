@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/detectiveHLH/go-backend-starter/router"
+	"github.com/detectiveHLH/go-backend-starter/setting"
 	"github.com/fvbock/endless"
 	"log"
 	"syscall"
@@ -13,11 +14,13 @@ import (
 // @description Go Backend Starter
 // @termsOfService https://github.com/detectiveHLH/go-backend-starter
 func main() {
+	setting.Setup()
+
 	r := router.InitRouter()
 	/**
 	启动服务器
 	*/
-	address := fmt.Sprintf("%s:%s", "localhost", "8080")
+	address := fmt.Sprintf("%s:%s", setting.ServerSetting.Ip, setting.ServerSetting.Port)
 	server := endless.NewServer(address, r)
 	server.BeforeBegin = func(add string) {
 		log.Printf("Actual pid is %d", syscall.Getpid())
