@@ -1,8 +1,5 @@
-package e
+package consts
 
-/**
-状态码常量表
- */
 const (
 	SUCCESS        = 200
 	ERROR          = 500

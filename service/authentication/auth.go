@@ -1,6 +1,6 @@
 package authentication
 
-import "go-backend-starter/models"
+import "fmt"
 
 type Auth struct {
 	Username string
@@ -8,5 +8,8 @@ type Auth struct {
 }
 
 func (a *Auth) Check() (bool, error) {
-	return models.CheckAuth(a.Username, a.Password)
+	userName := a.Username
+	passWord := a.Password
+	fmt.Println(userName, passWord)
+	return true, nil
 }

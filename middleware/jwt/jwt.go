@@ -1,35 +1,35 @@
 package jwt
 
 import (
+	"github.com/detectiveHLH/go-backend-starter/consts"
+	"github.com/detectiveHLH/go-backend-starter/util"
 	"github.com/gin-gonic/gin"
-	"go-backend-starter/pkg/e"
-	"go-backend-starter/pkg/util"
 	"net/http"
 	"time"
 )
 
-func JWT() gin.HandlerFunc {
+func Jwt() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var code int
 		var data interface{}
 
-		code = e.SUCCESS
+		code = consts.SUCCESS
 		token := c.Query("token")
 		if token == "" {
-			code = e.INVALID_PARAMS
+			code = consts.INVALID_PARAMS
 		} else {
 			claims, err := util.ParseToken(token)
 			if err != nil {
-				code = e.ERROR_AUTH_CHECK_TOKEN_FAIL
+				code = consts.ERROR_AUTH_CHECK_TOKEN_FAIL
 			} else if time.Now().Unix() > claims.ExpiresAt {
-				code = e.ERROR_AUTH_CHECK_TOKEN_TIMEOUT
+				code = consts.ERROR_AUTH_CHECK_TOKEN_TIMEOUT
 			}
 		}
 
-		if code != e.SUCCESS {
+		if code != consts.SUCCESS {
 			c.JSON(http.StatusUnauthorized, gin.H{
 				"code": code,
-				"msg":  e.GetMsg(code),
+				"msg":  consts.GetMsg(code),
 				"data": data,
 			})
 

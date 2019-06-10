@@ -1,10 +1,10 @@
 package util
 
 import (
+	"github.com/detectiveHLH/go-backend-starter/setting"
 	"github.com/dgrijalva/jwt-go"
-	"go-backend-starter/pkg/setting"
 	"time"
-)
+	)
 
 var jwtSecret = []byte(setting.AppSetting.JwtSecret)
 
@@ -19,7 +19,7 @@ type Claims struct {
 @param 	username 	用户名  	string
 @param 	password 	密码	   	string
 @returns token, err
- */
+*/
 func GenerateToken(username, password string) (string, error) {
 	nowTime := time.Now()
 	expireTime := nowTime.Add(3 * time.Hour)
@@ -41,7 +41,7 @@ func GenerateToken(username, password string) (string, error) {
 解析token
 @param		token
 @returns 	token, err
- */
+*/
 func ParseToken(token string) (*Claims, error) {
 	tokenClaims, err := jwt.ParseWithClaims(token, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return jwtSecret, nil

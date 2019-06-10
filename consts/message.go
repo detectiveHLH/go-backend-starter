@@ -1,8 +1,5 @@
-package e
+package consts
 
-/**
-后端返回信息的映射表
- */
 var MsgFlags = map[int]string{
 	SUCCESS:                         "ok",
 	ERROR:                           "fail",
@@ -39,7 +36,7 @@ var MsgFlags = map[int]string{
 根据code返回相应的信息
 @param	code	key
 @return	msg		value
- */
+*/
 func GetMsg(code int) string {
 	msg, ok := MsgFlags[code]
 	if ok {

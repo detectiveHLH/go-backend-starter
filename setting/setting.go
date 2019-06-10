@@ -6,12 +6,6 @@ import (
 	"os/user"
 )
 
-/**
-定义配置结构体
-App			应用相关设置
-Server		服务器相关设置
-Database	数据库县骨干舍
- */
 type App struct {
 	JwtSecret string
 }
