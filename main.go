@@ -9,7 +9,7 @@ import (
 	"syscall"
 )
 
-// @title Golang Gin API
+// @title Go Backend Starter API
 // @version 1.0
 // @description Go Backend Starter
 // @termsOfService https://github.com/detectiveHLH/go-backend-starter
